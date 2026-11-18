@@ -88,6 +88,7 @@ def validate(root=ROOT):
             continue
         try:text=path.read_text()
         except UnicodeDecodeError:failures.append(f'Unexpected binary: {rel}');continue
+        require(not re.search(r'(?im)^\s*(?:#{1,6}\s*)?step\s+[3-6]\s*[:.\-–•]',text),f'Internal build-stage heading in public copy: {rel}')
         # Match real private paths and documents without embedding an actual path.
         require(not re.search(r'/U[s]ers/|/ho[m]e/|docs[.]google[.]com/(?:document|spreadsheets)/d/',text),f'Private-location marker: {rel}')
         require(not re.search(r'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----',text),f'Private-key marker: {rel}')
