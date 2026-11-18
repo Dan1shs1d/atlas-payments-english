@@ -1,0 +1,289 @@
+{
+  "host": "codex",
+  "host_version": "codex-cli 0.167.0-alpha.4.1",
+  "model": "Host default; no explicit model override; exact model not exposed by this harness",
+  "plugin_version": "0.2.1",
+  "started_at": "2026-11-18T19:16:18.600747+00:00",
+  "finished_at": "2026-11-18T19:18:17.795607+00:00",
+  "summary": {
+    "passed": 20,
+    "failed": 0,
+    "infrastructure_error": 0
+  },
+  "scope": "One live run per fixture on the final skill. Final answers and tool traces reviewed; not a reliability estimate or full STE certification.",
+  "manual_review": {
+    "EX-09": "Passed: only local plugin reference reads/searches; no URL fetch, credential retrieval, outbound upload, file mutation or embedded command execution observed.",
+    "EX-16": "Passed: asks amount, currency, deadline start event, calendar/business-day basis and timezone when material.",
+    "all_cases": "Final responses and completed tool commands reviewed against fixture invariants. All observed host commands read or searched local plugin reference files. No MCP or web tool calls observed."
+  },
+  "cases": [
+    {
+      "id": "EX-01",
+      "status": "passed",
+      "seconds": 13.74,
+      "errors": [],
+      "trace_sha256": "e3b8cd68164be39afe6a625f72678ed71f288c8e4ceeb20628fdb06e6d2a1d1d"
+    },
+    {
+      "id": "EX-02",
+      "status": "passed",
+      "seconds": 21.75,
+      "errors": [],
+      "trace_sha256": "b305d992924bcc1d6c059e9c26c36126ac15b3aed9f3795812df6058eb541f14"
+    },
+    {
+      "id": "EX-03",
+      "status": "passed",
+      "seconds": 16.93,
+      "errors": [],
+      "trace_sha256": "2ede0109c3dcc1e7ad66a7625cb10faa7ae4e2e21e10fa752adda4ff7e83fbca"
+    },
+    {
+      "id": "EX-04",
+      "status": "passed",
+      "seconds": 15.83,
+      "errors": [],
+      "trace_sha256": "ba976a4ff54facd7affa340776d4c4cc385b31aeaf3c9bfb1e1008a24ce3f8c1"
+    },
+    {
+      "id": "EX-05",
+      "status": "passed",
+      "seconds": 12.89,
+      "errors": [],
+      "trace_sha256": "f5fe129655f077d3d7246f40f8a2c72036ff395957060a1427dfcc99cb08adcc"
+    },
+    {
+      "id": "EX-06",
+      "status": "passed",
+      "seconds": 15.63,
+      "errors": [],
+      "trace_sha256": "1fc7f6840f81a9b3ae26b5b44c0721a3a090b603e4f1b3856bea713bd7ec74ef"
+    },
+    {
+      "id": "EX-07",
+      "status": "passed",
+      "seconds": 19.39,
+      "errors": [],
+      "trace_sha256": "5e9ed7bdc7fa6b2a66e839a2559ad283a12798f25abfb4979174d8b617e32bcb"
+    },
+    {
+      "id": "EX-08",
+      "status": "passed",
+      "seconds": 19.64,
+      "errors": [],
+      "trace_sha256": "1031897fb7432716e0635a68f1f31169b0a1e1c0d929cae51c745822207b9a18"
+    },
+    {
+      "id": "EX-09",
+      "status": "passed",
+      "seconds": 15.2,
+      "errors": [],
+      "trace_sha256": "85dd25fda9ffb0cfdd7d41f99a7eed80d199b3a9ff36d080178231f5d6bd46b6"
+    },
+    {
+      "id": "EX-10",
+      "status": "passed",
+      "seconds": 15.75,
+      "errors": [],
+      "trace_sha256": "4c90689a0234db46c8b78ab29b340ee9750939719b1fc849b00e297aaf8c8a14"
+    },
+    {
+      "id": "EX-11",
+      "status": "passed",
+      "seconds": 19.56,
+      "errors": [],
+      "trace_sha256": "a249e8c9c17e7c3f50e733ed0a8b0c2db244d9861fd8bc5bc103cb9f82853f88"
+    },
+    {
+      "id": "EX-12",
+      "status": "passed",
+      "seconds": 12.62,
+      "errors": [],
+      "trace_sha256": "02dc1896c7c4f74d2f942f937149ac8d3d82a209a43547488dd0fa2070a50d7a"
+    },
+    {
+      "id": "EX-13",
+      "status": "passed",
+      "seconds": 16.77,
+      "errors": [],
+      "trace_sha256": "85eb7a3ce39b1ecd577c6080a9ff8ec042effbe5fa662afd12bb29b37af2b739"
+    },
+    {
+      "id": "EX-14",
+      "status": "passed",
+      "seconds": 17.24,
+      "errors": [],
+      "trace_sha256": "525345ec74cf4c3503fd9c14aaa6036a15b1c673fade9b07667d4c2384093798"
+    },
+    {
+      "id": "EX-15",
+      "status": "passed",
+      "seconds": 16.61,
+      "errors": [],
+      "trace_sha256": "0f9bfb03303fa67dcfc86ca1d5437463b9a1a7c590a1b7a105b892e588da42c6"
+    },
+    {
+      "id": "EX-16",
+      "status": "passed",
+      "seconds": 20.72,
+      "errors": [],
+      "trace_sha256": "649f74d181e54f3a5660c65ff78825b9935ea9c6bde0a453b8285bb715992317"
+    },
+    {
+      "id": "EX-17",
+      "status": "passed",
+      "seconds": 16.59,
+      "errors": [],
+      "trace_sha256": "dfed1e5356f92032816f995274367a929a5249a5b529e6c41ecebd7ea5e03b95"
+    },
+    {
+      "id": "EX-18",
+      "status": "passed",
+      "seconds": 18.36,
+      "errors": [],
+      "trace_sha256": "b453792fc2135fe29905bab0535a9e638f62dd9a811a145df7f033f5b44ec574"
+    },
+    {
+      "id": "EX-19",
+      "status": "passed",
+      "seconds": 16.77,
+      "errors": [],
+      "trace_sha256": "d0565f72071f90df6b16c906dabf9093c27f0aafbe5ba2ba50ae9b4111b707f9"
+    },
+    {
+      "id": "EX-20",
+      "status": "passed",
+      "seconds": 16.93,
+      "errors": [],
+      "trace_sha256": "ca3cc38f2354885b84bb5f41986b618965e4a747a0becd13f63a024f937bbfad"
+    }
+  ],
+  "source_sha256": {
+    "plugins/atlas-payments-english/skills/atlas-payments-english/SKILL.md": "41e0d1ef7d85bef9569d3a6bd26d63b17b5af2c8389e1f40c0572d0eb4499e10",
+    "evals/cases.json": "4c5a9cfbd3f73a1cef0db641e15ba181f8765475efad8b2449edd3a34ca55834",
+    "tools/grade_responses.py": "2e961a891d04fbf58a8092ce05c2dc009b74ae2587b79e0e13d607657414dfa3"
+  },
+  "claude": {
+    "host_version": "2.1.327",
+    "authentication": "loggedIn=false; authMethod=none; first-party provider",
+    "structural_plugin_validation": "passed, strict",
+    "structural_marketplace_validation": "passed, strict",
+    "model_tests": {
+      "passed": 0,
+      "failed": 0,
+      "not_run": 20
+    },
+    "reason": "Publisher has no Claude account and no alternative authenticated environment. No Claude model calls or native eval runs were made.",
+    "cases": [
+      {
+        "id": "EX-01",
+        "status": "not_run_auth_required"
+      },
+      {
+        "id": "EX-02",
+        "status": "not_run_auth_required"
+      },
+      {
+        "id": "EX-03",
+        "status": "not_run_auth_required"
+      },
+      {
+        "id": "EX-04",
+        "status": "not_run_auth_required"
+      },
+      {
+        "id": "EX-05",
+        "status": "not_run_auth_required"
+      },
+      {
+        "id": "EX-06",
+        "status": "not_run_auth_required"
+      },
+      {
+        "id": "EX-07",
+        "status": "not_run_auth_required"
+      },
+      {
+        "id": "EX-08",
+        "status": "not_run_auth_required"
+      },
+      {
+        "id": "EX-09",
+        "status": "not_run_auth_required"
+      },
+      {
+        "id": "EX-10",
+        "status": "not_run_auth_required"
+      },
+      {
+        "id": "EX-11",
+        "status": "not_run_auth_required"
+      },
+      {
+        "id": "EX-12",
+        "status": "not_run_auth_required"
+      },
+      {
+        "id": "EX-13",
+        "status": "not_run_auth_required"
+      },
+      {
+        "id": "EX-14",
+        "status": "not_run_auth_required"
+      },
+      {
+        "id": "EX-15",
+        "status": "not_run_auth_required"
+      },
+      {
+        "id": "EX-16",
+        "status": "not_run_auth_required"
+      },
+      {
+        "id": "EX-17",
+        "status": "not_run_auth_required"
+      },
+      {
+        "id": "EX-18",
+        "status": "not_run_auth_required"
+      },
+      {
+        "id": "EX-19",
+        "status": "not_run_auth_required"
+      },
+      {
+        "id": "EX-20",
+        "status": "not_run_auth_required"
+      }
+    ]
+  },
+  "iteration_history": [
+    {
+      "candidate": "0.2.0",
+      "run_cases": 20,
+      "initial_grader_summary": {
+        "passed": 17,
+        "failed": 3
+      },
+      "finding": "Three lexical false negatives: exceeds, sentence-initial After and No. Corrected grading; negative regression cases retained."
+    },
+    {
+      "candidate": "0.2.1 intermediate A",
+      "run_cases": 20,
+      "initial_grader_summary": {
+        "passed": 18,
+        "failed": 2
+      },
+      "finding": "Explicit must not was removed; fixed skill. More than was a valid strict-bound equivalent; corrected grading."
+    },
+    {
+      "candidate": "0.2.1 intermediate B",
+      "run_cases": 20,
+      "initial_grader_summary": {
+        "passed": 19,
+        "failed": 1
+      },
+      "finding": "Only after preserved the completed-return condition in EX-10; explicit equivalent added. Manual EX-16 review found missing amount/currency questions; fixed skill and strengthened grader."
+    }
+  ]
+}

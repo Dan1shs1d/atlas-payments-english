@@ -30,8 +30,15 @@ def validate(root=ROOT):
         require(not any(k in m for k in ['mcpServers','hooks','apps','userConfig']),'Unexpected executable/service capabilities')
         require('email'not in m.get('author',{}),'Author email must not be bundled')
     ext=parsed[0].get('extensions',{}).get('com.openai',{})
-    require(set(ext)=={'interface'},'Unexpected OpenAI extensions')
+    require(set(ext)<={'interface','publication','review'}and 'interface'in ext,'Unexpected OpenAI extensions')
     require(ext['interface']==parsed[1]['interface'],'Codex presentation differs from portable presentation')
+    interface=ext['interface']
+    for key,limit in [('displayName',30),('shortDescription',30),('longDescription',4000),('developerName',80)]:
+        require(isinstance(interface.get(key),str)and 0<len(interface[key])<=limit,f'Invalid listing length: {key}')
+    for key in ['websiteURL','supportURL','privacyPolicyURL','termsOfServiceURL']:
+        require(interface.get(key,'').startswith('https://')and len(interface.get(key,''))<=1024,f'Invalid listing URL: {key}')
+    readme=plugin/'README.md'
+    require(readme.is_file()and len(readme.read_text().split())>=40,'Plugin-local README must contain at least 40 words')
     for parent in ['.agents/plugins','.claude-plugin']:
         try:
             market=read(root/parent/'marketplace.json')

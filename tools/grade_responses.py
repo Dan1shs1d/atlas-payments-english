@@ -4,7 +4,7 @@ Usage: python3 tools/grade_responses.py --responses responses.jsonl
 Each line: {"id":"EX-01","response":{...matching output.schema.json...}}
 No model or network calls are made. A pass covers the fixture, not all semantics.
 """
-import argparse,json
+import argparse,json,re
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -24,6 +24,9 @@ def grade(case,response):
         if not isinstance(response.get(name),list)or not all(isinstance(s,str)and s.strip()for s in response.get(name,[])):errors.append(f'{name} must be an array of nonempty strings')
     if not response.get('checks_not_completed'):errors.append('Disclose unchecked conformance/operational checks')
     expected=case['expected']
+    question_text=' '.join(response.get('questions',[]))+' '+' '.join(f.get('suggested_edit','')for f in response.get('findings',[])if isinstance(f,dict))
+    for pattern in expected.get('question_patterns',[]):
+        if not re.search(pattern,question_text,re.IGNORECASE):errors.append(f'Required clarification topic missing: {pattern}')
     if expected.get('questions_required')and not response.get('questions'):
         questions=' '.join(f.get('suggested_edit','')for f in response.get('findings',[])if isinstance(f,dict))
         if '?'not in questions:errors.append('Required clarification missing')
@@ -32,6 +35,8 @@ def grade(case,response):
         if not isinstance(text,str):return errors+['Missing revised_text']
         for literal in expected.get('preserve',[]):
             if literal not in text:errors.append(f'Protected content missing: {literal}')
+        for pattern in expected.get('semantic_patterns',[]):
+            if not re.search(pattern,text,re.IGNORECASE):errors.append(f'Required meaning pattern missing: {pattern}')
         for value in expected.get('forbid_in_rewrite',[]):
             if value.lower()in text.lower():errors.append(f'Forbidden meaning change: {value}')
         if expected.get('canonical_rewrite')and text!=expected['canonical_rewrite']:errors.append('Canonical regression fixture differs; human semantic review needed')

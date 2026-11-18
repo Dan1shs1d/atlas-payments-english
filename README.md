@@ -81,6 +81,8 @@ python3 -m unittest discover -s tests -v
 python3 tools/package_release.py
 ```
 
+Candidate validation and submission preparation: [directory guide](docs/directory-submission.md) and [per-case results](evals/results-summary.json). Claude model tests remain not run without authentication.
+
 See [architecture](docs/architecture.md), [security](SECURITY.md), [privacy](PRIVACY.md), [verification](docs/verification.md), [contribution guide](CONTRIBUTING.md), and [social examples](docs/social-examples.md).
 
 Installation formats: [Codex packaging](https://developers.openai.com/plugins/build/plugins) and [Claude Code plugins](https://code.claude.com/docs/en/plugins). Standard baseline: [ASD-STE100 Issue 9](https://www.asd-ste100.org/assets/files/ASD-STE100_ISSUE9.pdf). Read [ASD's guidance on software tools](https://asd-ste100.org/STEsoftware.html).

@@ -57,6 +57,28 @@ class ReleaseTests(unittest.TestCase):
     def test_incomplete_check_disclosure_required(self):
         r=review();r['checks_not_completed']=[];self.assertTrue(grade(CASES['EX-14'],r))
     def test_invalid_response_type_rejected(self):self.assertTrue(grade(CASES['EX-01'],'not structured output'))
+    def test_refund_questions_must_cover_amount_currency_and_deadline(self):
+        r=review();r['findings']=[dict(excerpt='within five days',rule_id='PAY-03',issue='Missing basis',severity='blocker',suggested_edit='What event starts the period; calendar or business days?')]
+        self.assertTrue(grade(CASES['EX-16'],r))
+        r['questions']=['What amount and currency should be refunded?']
+        self.assertEqual(grade(CASES['EX-16'],r),[])
     def test_case_ids_are_unique(self):self.assertEqual(len(CASES),20)
+    def test_semantic_equivalents_pass(self):
+        for key,text in [('EX-10','The merchant may refund EUR 50 only after the customer has returned the goods.'),('EX-12','If the amount exceeds USD 100, send the case for review.'),('EX-13','After clearing, the acquirer received the settlement report.'),('EX-20','The provider returned `authentication_required`. No authorization approval was received.')]:
+            with self.subTest(key=key):self.assertEqual(grade(CASES[key],rewrite(text)),[])
+    def test_removed_necessary_condition_fails(self):
+        self.assertTrue(grade(CASES['EX-10'],rewrite('The merchant may refund EUR 50 after the customer has returned the goods.')))
+    def test_lost_negation_fails(self):
+        self.assertTrue(grade(CASES['EX-20'],rewrite('The provider returned `authentication_required`. Authorization approval was received.')))
+    def test_inclusive_exceeds_wording_fails(self):
+        self.assertTrue(grade(CASES['EX-12'],rewrite('If the amount exceeds USD 100 or equals USD 100, send the case for review.')))
+    def test_prompt_does_not_expose_gold_answers(self):
+        from run_acceptance import prompt_for
+        prompt=prompt_for(CASES['EX-01'],'codex')
+        self.assertNotIn(CASES['EX-01']['expected']['canonical_rewrite'],prompt)
+        self.assertIn(CASES['EX-01']['text'],prompt)
+    def test_default_mode_is_not_supplied_by_harness(self):
+        from run_acceptance import prompt_for
+        self.assertNotIn('Review',prompt_for(CASES['EX-02'],'codex'))
 
 if __name__=='__main__':unittest.main()
