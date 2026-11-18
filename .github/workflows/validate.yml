@@ -1,0 +1,21 @@
+name: Validate public plugin
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Validate release boundaries
+        run: python3 tools/validate_release.py
+      - name: Test validators and regression grading
+        run: python3 -m unittest discover -s tests -v
+      - name: Build deterministic public archive
+        run: python3 tools/package_release.py

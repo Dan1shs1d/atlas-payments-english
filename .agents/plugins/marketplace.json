@@ -1,0 +1,20 @@
+{
+  "name": "atlas-payments",
+  "interface": {
+    "displayName": "Atlas Payments English"
+  },
+  "plugins": [
+    {
+      "name": "atlas-payments-english",
+      "source": {
+        "source": "local",
+        "path": "./plugins/atlas-payments-english"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

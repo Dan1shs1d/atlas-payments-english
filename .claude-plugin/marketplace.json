@@ -1,0 +1,16 @@
+{
+  "name": "atlas-payments",
+  "description": "Independent controlled-language tools for payments documentation.",
+  "owner": {
+    "name": "Danish Siddiqui"
+  },
+  "plugins": [
+    {
+      "name": "atlas-payments-english",
+      "source": "./plugins/atlas-payments-english",
+      "description": "ASD-STE100–inspired payments editor for Codex and Claude Code. Review and rewrite technical documentation while preserving payment meaning.",
+      "version": "0.2.0",
+      "license": "MIT"
+    }
+  ]
+}

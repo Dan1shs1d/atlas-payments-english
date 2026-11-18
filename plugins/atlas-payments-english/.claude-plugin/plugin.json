@@ -1,0 +1,19 @@
+{
+  "name": "atlas-payments-english",
+  "version": "0.2.0",
+  "description": "ASD-STE100–inspired payments editor for Codex and Claude Code. Review and rewrite technical documentation while preserving payment meaning.",
+  "author": {
+    "name": "Danish Siddiqui"
+  },
+  "homepage": "https://github.com/Dan1shs1d/atlas-payments-english",
+  "repository": "https://github.com/Dan1shs1d/atlas-payments-english",
+  "license": "MIT",
+  "keywords": [
+    "payments",
+    "simplified-technical-english",
+    "documentation",
+    "controlled-language",
+    "codex",
+    "claude-code"
+  ]
+}

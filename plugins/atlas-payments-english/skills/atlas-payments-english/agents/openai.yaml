@@ -1,0 +1,4 @@
+interface:
+  display_name: "Atlas Payments English"
+  short_description: "Simplified Technical English for payments"
+  default_prompt: "Use $atlas-payments-english to review this payments documentation."

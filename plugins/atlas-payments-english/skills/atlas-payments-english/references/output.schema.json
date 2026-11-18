@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Atlas Payments English result",
+  "oneOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "const": "Reviewed against Atlas Payments English"
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "checks_not_completed": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "mode": {
+          "const": "Review"
+        },
+        "findings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "excerpt",
+              "rule_id",
+              "issue",
+              "severity",
+              "suggested_edit"
+            ],
+            "properties": {
+              "excerpt": {
+                "type": "string"
+              },
+              "rule_id": {
+                "enum": [
+                  "STYLE-01",
+                  "PAY-01",
+                  "PAY-02",
+                  "PAY-03"
+                ]
+              },
+              "issue": {
+                "type": "string"
+              },
+              "severity": {
+                "enum": [
+                  "error",
+                  "blocker"
+                ]
+              },
+              "suggested_edit": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "optional_suggestions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "label",
+        "questions",
+        "checks_not_completed",
+        "mode",
+        "findings",
+        "optional_suggestions"
+      ]
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "const": "Reviewed against Atlas Payments English"
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "checks_not_completed": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "mode": {
+          "const": "Rewrite"
+        },
+        "revised_text": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "label",
+        "questions",
+        "checks_not_completed",
+        "mode",
+        "revised_text"
+      ]
+    }
+  ]
+}
