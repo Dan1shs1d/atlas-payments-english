@@ -1,6 +1,6 @@
 # Directory submission preparation
 
-Candidate: **0.2.1**. Intended availability: **United States (US), United Kingdom (GB)**, selected by the publisher. This document prepares submissions; neither directory submission nor approval is claimed. See [verification](verification.md) and [case results](../evals/results-summary.json) for evidence and limits.
+Release: **0.2.1**, prepared for directory review. Intended availability: **United States (US), United Kingdom (GB)**, selected by the publisher. This document prepares submissions; neither directory submission nor approval is claimed. See [verification](verification.md) and [case results](../evals/results-summary.json) for evidence and limits.
 
 ## Listing copy
 
@@ -38,8 +38,8 @@ Source settings:
 ```text
 Repository: Dan1shs1d/atlas-payments-english
 Plugin path: plugins/atlas-payments-english
-Candidate version: 0.2.1
-Tracked ref: select the reviewed commit/tag containing this candidate
+Release version: 0.2.1
+Tracked ref: v0.2.1
 ```
 
 1. First obtain an authenticated Claude Code environment and run all 20 model cases using the commands below. Current status is **NOT RUN — authentication unavailable**. Native validation passed; it does not replace model tests or portal checks.

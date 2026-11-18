@@ -1,6 +1,6 @@
 # Verification and release scope
 
-Candidate: 0.2.1, 18 November 2026. Neither directory submission nor approval is claimed.
+Public release: 0.2.1, 18 November 2026. Neither directory submission nor approval is claimed.
 
 ## Executed checks
 
