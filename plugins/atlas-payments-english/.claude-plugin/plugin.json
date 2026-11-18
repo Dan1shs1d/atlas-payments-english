@@ -1,6 +1,6 @@
 {
   "name": "atlas-payments-english",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "ASD-STE100–inspired payments editor for Codex and Claude Code. Review and rewrite technical documentation while preserving payment meaning.",
   "author": {
     "name": "Danish Siddiqui"

@@ -1,6 +1,6 @@
 {
   "name": "atlas-payments-english",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "ASD-STE100–inspired payments editor for Codex and Claude Code. Review and rewrite technical documentation while preserving payment meaning.",
   "author": {
     "name": "Danish Siddiqui"
@@ -19,13 +19,17 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Atlas Payments English",
-    "shortDescription": "Simplified Technical English for payments",
+    "shortDescription": "Clear payments documentation",
     "longDescription": "ASD-STE100–inspired payments editor for Codex and Claude Code. Review and rewrite technical documentation while preserving payment meaning. Independent adaptation; not an ASD-approved or certified tool.",
     "developerName": "Danish Siddiqui",
     "category": "Productivity",
     "capabilities": [],
     "defaultPrompt": "Review this payments documentation with Atlas Payments English.",
     "composerIcon": "./assets/icon.png",
-    "logo": "./assets/icon.png"
+    "logo": "./assets/icon.png",
+    "websiteURL": "https://github.com/Dan1shs1d/atlas-payments-english",
+    "supportURL": "https://github.com/Dan1shs1d/atlas-payments-english/issues",
+    "privacyPolicyURL": "https://github.com/Dan1shs1d/atlas-payments-english/blob/main/PRIVACY.md",
+    "termsOfServiceURL": "https://github.com/Dan1shs1d/atlas-payments-english/blob/main/LICENSE"
   }
 }

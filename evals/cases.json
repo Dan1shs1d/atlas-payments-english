@@ -131,12 +131,14 @@
         "merchant",
         "may",
         "EUR 50",
-        "only if",
         "returned"
       ],
       "forbid_in_rewrite": [
         "must",
         "USD"
+      ],
+      "semantic_patterns": [
+        "\\bonly (?:if|after) the customer has returned the goods\\b"
       ]
     }
   },
@@ -161,12 +163,18 @@
     "expected": {
       "mode": "Rewrite",
       "preserve": [
-        "greater than",
         "USD 100"
       ],
       "forbid_in_rewrite": [
         "at least",
-        "greater than or equal"
+        "greater than or equal",
+        "equals USD 100",
+        "equal to USD 100",
+        ">=",
+        "≥"
+      ],
+      "semantic_patterns": [
+        "\\b(?:greater than|more than|exceeds) USD 100\\b"
       ]
     }
   },
@@ -177,11 +185,13 @@
       "mode": "Rewrite",
       "preserve": [
         "acquirer",
-        "settlement report",
-        "after clearing"
+        "settlement report"
       ],
       "forbid_in_rewrite": [
         "before clearing"
+      ],
+      "semantic_patterns": [
+        "\\bafter clearing\\b"
       ]
     }
   },
@@ -209,7 +219,14 @@
       "rules": [
         "PAY-03"
       ],
-      "questions_required": true
+      "questions_required": true,
+      "question_patterns": [
+        "\\bamount\\b",
+        "\\bcurrenc(?:y|ies)\\b",
+        "\\b(?:start|starts|starting|begin|begins|from)\\b",
+        "\\bcalendar\\b",
+        "\\bbusiness\\b"
+      ]
     },
     "manual_checks": [
       "Ask for the amount/currency and deadline basis (start event, calendar/business days, timezone when material). Do not invent network policy."
@@ -252,11 +269,13 @@
     "expected": {
       "mode": "Rewrite",
       "preserve": [
-        "`authentication_required`",
-        "no authorization approval"
+        "`authentication_required`"
       ],
       "forbid_in_rewrite": [
         "payment was approved"
+      ],
+      "semantic_patterns": [
+        "\\bno authorization approval was received\\b"
       ]
     }
   }

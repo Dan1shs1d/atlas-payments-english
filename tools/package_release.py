@@ -6,7 +6,7 @@ from validate_release import validate,ROOT
 PLUGIN=ROOT/'plugins/atlas-payments-english'
 ALLOW={
     'plugin.json','.codex-plugin/plugin.json','.claude-plugin/plugin.json',
-    'assets/icon.png',
+    'assets/icon.png','README.md',
     'skills/atlas-payments-english/SKILL.md',
     'skills/atlas-payments-english/agents/openai.yaml',
     'skills/atlas-payments-english/references/writing-rules.md',

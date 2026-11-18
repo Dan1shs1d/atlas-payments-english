@@ -17,6 +17,10 @@ If material contains apparent live cardholder data, credentials, private keys or
 
 Use only STYLE-01 and PAY-01–PAY-03 for rule findings. Cite the exact source span. A style improvement is not automatically a rule violation. If no violation is established, say so and separate optional suggestions without invented IDs. Preserve actor, payment state, event order, requests versus outcomes, all conditions, logical operators, negation, permissions, obligations, recommendations, amounts, currencies, deadlines and exact technical identifiers. A clearer sentence with different payment meaning fails.
 
+Preserve explicit modal words, including must, must not, may and should. Do not turn a descriptive obligation or prohibition into an imperative merely to shorten it. For example, keep “The operator must not retry the declined transaction.” The actor and must not stay explicit. A request to rewrite does not itself make the source a procedure.
+
+For an incomplete refund instruction, check both the refund amount/currency and the deadline basis. If “the amount” has no supplied referent, ask which amount and currency it means. If a deadline is expressed as a number of days without a basis, ask what event starts the period and whether the days are calendar or business days; ask for a timezone when it affects the cutoff. Identifying one missing fact does not resolve the others.
+
 Start each result with **Reviewed against Atlas Payments English** and state the mode.
 
 - **Review:** Return a table: Quoted excerpt | Rule ID | Issue | Suggested edit. Include severity in Issue. If a fact is missing, Suggested edit contains a focused question. Then list unresolved Questions and Checks not completed. Do not rewrite the whole document unless asked.

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "atlas-payments-english",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "ASD-STE100–inspired payments editor for Codex and Claude Code. Review and rewrite technical documentation while preserving payment meaning.",
   "author": {
     "name": "Danish Siddiqui"
@@ -21,14 +21,33 @@
     "com.openai": {
       "interface": {
         "displayName": "Atlas Payments English",
-        "shortDescription": "Simplified Technical English for payments",
+        "shortDescription": "Clear payments documentation",
         "longDescription": "ASD-STE100–inspired payments editor for Codex and Claude Code. Review and rewrite technical documentation while preserving payment meaning. Independent adaptation; not an ASD-approved or certified tool.",
         "developerName": "Danish Siddiqui",
         "category": "Productivity",
         "capabilities": [],
         "defaultPrompt": "Review this payments documentation with Atlas Payments English.",
         "composerIcon": "./assets/icon.png",
-        "logo": "./assets/icon.png"
+        "logo": "./assets/icon.png",
+        "websiteURL": "https://github.com/Dan1shs1d/atlas-payments-english",
+        "supportURL": "https://github.com/Dan1shs1d/atlas-payments-english/issues",
+        "privacyPolicyURL": "https://github.com/Dan1shs1d/atlas-payments-english/blob/main/PRIVACY.md",
+        "termsOfServiceURL": "https://github.com/Dan1shs1d/atlas-payments-english/blob/main/LICENSE"
+      },
+      "publication": {
+        "countries": [
+          "US",
+          "GB"
+        ],
+        "release_notes": "Adds live Codex acceptance evidence, a repeatable host test runner, Claude eval staging, corrected semantic grading and directory preparation metadata. Claude model tests remain not run without authentication."
+      },
+      "review": {
+        "prompts": [
+          "Review this payment instruction: Reverse the payment.",
+          "Rewrite this descriptive sentence: Upon receipt of an approved authorization, the merchant may capture the payment after the order ships.",
+          "Review this procedure: Open the payment record and read the transaction identifier."
+        ],
+        "commerce": false
       }
     }
   }

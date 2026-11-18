@@ -6,3 +6,4 @@ __pycache__/
 dist/
 responses*.jsonl
 .pytest_cache/
+evals/results/
