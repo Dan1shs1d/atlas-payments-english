@@ -6,6 +6,13 @@ An **ASD-STE100–inspired payments editor for Codex and Claude Code**. Review o
 
 Independent adaptation of selected Issue 9 principles. **Not an ASD-approved or certified tool, and not the ASD standard for payments.** Full STE conformance and operational correctness require separate review.
 
+## Read the guide and browse the glossary
+
+- [Why global payments teams need a shared language](https://www.atlasofpayments.com/articles/clear-payment-language-for-global-teams): how the editor works, why payment meaning matters, and Wittgenstein’s language-games.
+- [Full payments glossary](https://www.atlasofpayments.com/glossary): all 255 entries, with definitions, recommended usage and sources.
+- [Before-and-after writing examples](https://www.atlasofpayments.com/guides/payments-writing-examples): conditions, modal words, payment states and clarification.
+- [Editor overview and installation](https://www.atlasofpayments.com/tools/payments-english).
+
 ## See the difference
 
 **Before**
@@ -61,7 +68,8 @@ Rewrite returns revised text, remaining questions and checks not completed. It d
 
 - One shared editorial skill with separate Codex and Claude metadata.
 - Four stable rules: STYLE-01 and PAY-01–PAY-03.
-- 255 scoped editorial terminology proposals with public references.
+- 255 scoped editorial terminology proposals with public references: 56 single-word headwords and 199 multiword terms.
+- Two editing modes: Review (default) and Rewrite (explicit).
 - Examples, structured response schema and adversarial acceptance cases.
 - A dependency-free release validator and response grader for maintainers.
 
